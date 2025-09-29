@@ -1,7 +1,10 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { ShoppingCart } from "lucide-react";
 
 const Header = () => {
+  const [searchItem, setSearchItem] = useState("");
+
   return (
     <>
       <div className="bg-gray-300 w-full h-[50px p-5 flex justify-between items-center">
@@ -14,6 +17,7 @@ const Header = () => {
             type="text"
             className="outline-none border-1 rounded-sm p-1 w-[450px] "
             placeholder="Search For Products"
+            onChange={(e) => setSearchItem(e.target.value)}
           />
         </div>
 

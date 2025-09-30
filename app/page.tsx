@@ -1,6 +1,4 @@
 import Card from "@/components/Card";
-import { products } from "@/constants/data";
-import React from "react";
 
 const HomePage = () => {
   return (
@@ -14,9 +12,7 @@ const HomePage = () => {
           className="flex
          flex-wrap justify-center gap-4"
         >
-          {products.map((item) => (
-            <Card item={item} key={item.id} />
-          ))}
+          <Card />
         </div>
       </div>
     </>

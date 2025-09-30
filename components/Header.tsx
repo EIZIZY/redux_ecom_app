@@ -1,9 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import { ShoppingCart } from "lucide-react";
+import { useAppDispatch } from "@/app/store/hooks";
+import { setSearch } from "@/app/store/searchSlice";
 
 const Header = () => {
-  const [searchItem, setSearchItem] = useState("");
+  const dispatch = useAppDispatch();
 
   return (
     <>
@@ -17,7 +19,7 @@ const Header = () => {
             type="text"
             className="outline-none border-1 rounded-sm p-1 w-[450px] "
             placeholder="Search For Products"
-            onChange={(e) => setSearchItem(e.target.value)}
+            onChange={(e) => dispatch(setSearch(e.target.value))}
           />
         </div>
 

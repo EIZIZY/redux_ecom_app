@@ -5,7 +5,11 @@ import { Button } from "./ui/button";
 import Image from "next/image";
 
 const Products = ({ item }) => {
-  const { name, price, image, description, rating, reviews } = item;
+  const { id, name, price, image, description, rating, reviews } = item;
+
+  const addToCart = () => {
+    console.log(id);
+  };
   return (
     <>
       <div className="w-[350px] bg-gray-300  rounded-lg flex flex-col justify-start  ">
@@ -31,7 +35,9 @@ const Products = ({ item }) => {
 
           <div className="flex justify-between">
             <p className="font-semibold text-[18px]">{price}</p>
-            <Button className="cursor-pointer">add to cart</Button>
+            <Button onClick={addToCart} className="cursor-pointer">
+              add to cart
+            </Button>
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import searchReducer from "./searchSlice";
 export const store = configureStore({
   reducer: {
     search: searchReducer,
+    addProduct: addProductReducer,
   },
 });
 
